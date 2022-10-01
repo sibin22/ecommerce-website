@@ -1,0 +1,249 @@
+<!DOCKTYPE.html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="./index.css">
+	 <script src="./products.json"></script>
+	 <script src="./index.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+   
+<title> e-com</title>	
+
+</head>
+<body>
+	<div class="navbar navbar-expand-lg navbar-fixed-top " style="width:100%;height:60px;margin-top: 0px;">
+
+		<a class="navbar-brand" href="./index.html">
+			<img src="./images/pngegg.png" style="width: 100px;margin-left: 15px;height: 25px;">
+		</a>
+		<nav id="ul1" >
+	
+			<a href="ecom.html" id="nav" class="active">HOME </a>
+		<a href="./mens.html"id="nav">MEN </a>
+		<a href="./women.html"id="nav">WOMEN </a>
+		<a href="./kids.html"id="nav">KIDS </a>
+		<a href="#"id="nav">OFFERS</a>
+			 </nav></a>
+			 
+			 <form class="for1" style="margin-left:auto;">
+				<input type="search" required placeholder="search product..">
+				<i class="ai bi-search"  style="font-size: 25px;"></i>
+			  </form>
+		
+
+       
+			<div class="btn-group">
+            <button class="btn"   id="cart-pg"><i class="bi bi-cart" onclick="carts()"id="id1"><span class="badge" id="num"
+            style="padding:0 5px;font-size:14px;background-color:red;margin-left:-7px;padding:px;margin-top:-12px ;color: white;"></span></i> </button>                                   <button class="btn" ><i class="bi2 bi-heart" id="id2"></i></button>
+				
+	<button type="button" class="btn" id="form" >
+			
+		<i class="bi2 bi-person-circle" id="id3" ></i>
+	</button>
+	<script>
+		document. getElementById("form"). onclick = function () {
+			location. href ="./form.html";}
+	</script>
+	</div>
+	<div class="ham" ><i class="bi bi-list" onclick="hamb()"></i></div>
+</div>
+
+		<div id="land" >
+			<div id="landimg">
+	<img class="shoe" src="./images/pngegg (3) - Copy.png"></div>	
+	<div class="section">
+		<div class="text" >
+		<p1 style=" font-size:3vw;font-weight:200;color:rgba(106, 255, 0, 0.902);font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">NIKE&nbsp; AIRMAX <b style="font-size: 2.5vw; font-weight:200;color:rgba(106, 255, 0, 0.902);">270</b></p1>
+		<p style="font-size:2vw; font-weight:450;color:rgb(121, 199, 248);font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">LIMITED</p>
+		<p style="font-size: 1vmax; color:whitesmoke;text-align:justify;word-spacing: normal;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;">look legendary in the nike airmax 270 limited.The silhoutte is a stitch for stitch reconstruction of the original big air icon,with the addition of breathable mesh and innovative traction that performs at the highest level of play.</p>
+		<P1 style="font-size:1.5vw;">Rs 2499/-</P1><br>
+		<span class="rating">
+			<i class="bi bi-star-fill" style="color:gold;"></i>
+			<i class="bi bi-star-fill" style="color:gold;"></i>
+			<i class="bi bi-star-fill"  style="color:gold;"></i>
+			<i class="bi bi-star-half" style="color:gold;"></i>
+			<i class="bi bi-star" style="color: rgb(255, 255, 255);"></i>
+			  </span><br><br>
+		<button class="shop" >SHOP NOW</button>	</div>
+	
+		<div class="group">
+			<div class="cardl">
+				<img class="card-img"  src="./images/PngItem_109181.png" style="width:110px;height:80px;;float:left;"><span>
+			 <p style="color:rgb(255, 255, 255);float:right;background-color:none;width: 120px;height:50px;margin-right:0px;margin-top: 10px;text-align: center;font-size: 20px;">NIKE <br>AIRMAX 200</p></span></div>
+			
+				<div class="cardl">
+						<img class="card-img"  src="./images/PngItem_1149906.png" style="width:110px;height:80px;float:left;"><span>
+					 <p style="color:rgb(255, 255, 255);float:right;background-color:none;width: 120px;height:50px;margin-right:0px;margin-top: 10px;text-align: center;font-size: 20px;">NIKE <br>AIRMAX 220</p></span></div></div>
+		</div></div>
+		
+		<div class="container" style="text-align:center; margin-top: 45px;max-width: 100%;">
+			<h3 style="font-weight:bold;">WHAT ARE YOU LOOKING FOR?</h3>
+		<div class="center" style="display:flex; height:80px;width:auto;margin-top: 40px; justify-content: center;gap: 35px;">
+			<div class="look" > RUNNING SHOES</div>
+			<div class="look">SLIPPERS</div>
+			<div class="look">WALKING SHOES</div>
+			<div class="look">CASUAL SHOES</div>
+		</div>
+		</div>
+
+		<div >
+			<div id="demo" class="carousel slide"data-ride="carousel">
+			<ul  class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0"class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+				<li data-target="#demo" data-slide-to="2"></li>
+				<li data-target="#demo" data-slide-to="3"></li>
+			</ul>
+				
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="./images/2bbcfa99737217.5ef9be3dbb9a9 - Copy - Copy.jpg" >
+				</div>
+				<div class="carousel-item">
+					<img src="./images/Wave_Inspire_18_home_mobile.png">
+				</div>
+				<div class="carousel-item">
+					<img src="./images/c3 - Copy - Copy.jpg">
+				</div>
+				<div class="carousel-item">
+					<img src="./images/shoe-cover-promotion-design-template-3342116f18fc86233f782b63f4c40430_screen - Copy.jpg">
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#demo" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" href="#demo" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+			</div>
+			
+			<br><br>		
+			
+		
+	<h3 style="text-align: center;font-weight: bold;">POPULAR PRODUCTS</h3>								
+		
+	<div class="card-deck" id="deck">
+	
+						</div>
+							
+<br><br>
+
+
+		<h3 style="font-weight:bold;text-align: center;"> SHOP BY CATOGORY</h3>	</br>	
+<div class="contain" id="card2">
+	
+	<div class="card"  style="max-height: 470px;width:auto;overflow: hidden;">
+		<img src="./images/pexels-photo-8234606 - Copy.jpeg" id="c1">
+		<div class="container">
+		<button id="men">SHOP MEN </button>
+		<script>
+			document. getElementById("men"). onclick = function () {
+			location. href ="./mens.html";}
+			</script>	
+	</div>
+	</div>
+
+	<div class="card" style="max-height: 470px;width:auto;overflow: hidden;">
+		<img src="./images/pexels-photo-993870 - Copy.jpeg" id="c1" >
+		<div class="container">
+			<button id="women">SHOP WOMEN </button>
+			<script>
+				document.getElementById("women").onclick = function(){
+					location.href="./women.html";}
+			</script>
+		</div>
+	</div>
+
+	<div class="card" style="max-height: 470px;width: auto;overflow: hidden;">
+		<img src="./images/pexels-photo-1620760 - Copy.jpeg" id="c1" >
+		<div class="container">
+			<button id="kids">KIDS </button>
+			<script>
+			document.getElementById("kids").onclick = function(){
+				location.href="./kids.html";}
+		
+			</script>
+		</div>
+	</div>
+
+				
+		</div>
+		<br><br><br>
+		
+<h3 style="text-align: center;color: black;font-weight: bold;margin-top:40px;">MOST LOVED BRANDS</h3><br>
+<div class="brands"id="flex">
+	<img class="pic" src="./images/58264-originals-adidas-smith-stan-logo-store - Copy - Copy.png" >
+	<img class="pic"src="./images/pngegg (9).png" >
+	<img class="pic"src="./images/pngegg (12).png">
+	<img class="pic"src="./images/pngegg (1) - Copy.png"  >
+	<img class="pic"src="./images/pngegg (6) - Copy.png">
+	<img class="pic"src="./images/pngegg (7) - Copy.png"> 
+	<img class="pic"src="./images/pngegg (13).png">  
+	<img class="pic"src="./images/pngegg (10).png">
+</div>
+		
+	<br><br><br>			
+<div class="footer">
+	<div class="footer2">	
+<div class="contain" id="footer">
+	<h3 style="color: white;margin-top: 16px;">STAY CONNECTED</h3>
+	<div id="form2">
+	<input type="email"id="email" placeholder="Enter your email" >
+<button id="submit">subscribe</button></div><br>
+<p style="color: rgb(232, 232, 232);">we don't send spams! </p>
+</div>
+
+<div class="content">
+<div id="os1">
+<p style="margin-left: 20px;font-size: 17px;">SHOPPING</p>
+	<ul><li>New arrivals</li><br><br>
+	<li>Mens</li><br><br>
+	<li>Womens</li><br><br>
+	<li>Brands</li><br><br>
+	<li>Offers</li></ol>
+	</div>
+
+<div id="os2">
+	<p style="margin-left: 20px;font-size: 17px;">ABOUT</p>
+	<ul>	<li>About us</li><br><br>
+		<li>Contact us</li><br><br>
+		<li>Store locator</li><br><br>
+		<li>Press</li><br><br>
+		<li>Blog</li></ul>
+		</div>
+
+
+		<div id="os3">
+			<p style="margin-left: 20px;font-size: 17px;">	POLICIES</p>
+			<ul>	<li>Return policy</li><br><br>
+				<li>Privacy policy</li><br><br>
+				<li>Terms & Condition</li><br><br>
+				<li>Shipping Information</li><br>
+			</ul>
+				</div>
+				<div id="os4">
+					<p style="margin-left: 20px;font-size: 17px;">HELP</p>
+					<ul>	<li>FAQ</li><br><br>
+						<li>Track your Order</li><br><br>
+						<li>Return Request</li><br><br>
+						
+					</ul>
+						</div></div></div><br><br><br>
+<hr>
+						<div id="span">
+							<p style="color:rgb(255, 255, 255);font-size: 20px;text-align: center; " >Folow us on</p><br>
+						<div class="icons" style="display:flex;margin:auto;gap:35px;justify-content: center;">
+							<i class="bi bi-facebook" id="social1" ></i>
+							<i class="bi bi-instagram"  id="social2"></i>
+							<i class="bi bi-twitter"  id="social3"></i>
+							<i class="bi bi-youtube" id="social4"></i>	
+						</div></div>
+<hr>
+<p style=" text-align:center;color:rgb(8, 255, 123);letter-spacing:10px;font-size:18px">DESIGN & DEVELOPED BY SIBIN.R</p>
+</div>
+</body>
+</html>

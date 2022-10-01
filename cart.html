@@ -1,0 +1,275 @@
+<!DOCTYPE.html>
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+	<script src="./product.js"></script>
+    <script src="./index.js"></script>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+<title>cart</title>
+</head>
+<body>
+
+
+    <div class="navbar navbar-expand-lg navbar-fixed-top " style="width:100%;height:auto;margin-top: 0px;">
+
+        <a class="navbar-brand" href="./index.html">
+            <img src="./images/pngegg.png" style="width: 100px;margin-left: 15px;height: 25px;">
+        </a>
+        <nav id="ul1" >
+    
+            <a href="ecom.html" id="nav">HOME </a>
+        <a href="./mens.html"id="nav">MEN </a>
+        <a href="./women.html"id="nav">WOMEN </a>
+        <a href="./kids.html"id="nav">KIDS </a>
+        <a href="#"id="nav">OFFERS</a>
+             </nav>
+             
+             <form class="for1" style="margin-left:auto;">
+                <input type="search" required placeholder="search product..">
+                <i class="ai bi-search"  style="font-size: 25px;"></i>
+              </form>
+        
+
+       
+              <div class="btn-group">
+                
+                    
+               <button class="btn" id="cart-pg"><i class="bi bi-cart" onclick="carts()" style="color:white"id="id1"><span class="badge" id="num"
+                    style="padding:0 5px;font-size:14px;color:white;background-color:red;margin-left:-7px;margin-top:-12px"></span></i> </button>                   
+   
+        
+                <button class="btn" ><i class="bi2 bi-heart" id="id2"></i></button>
+                
+    <button type="button" class="btn" id="form">
+        <i class="bi2 bi-person-circle" id="id3"></i>
+    </button>
+    <script>
+		document. getElementById("form"). onclick = function () {
+			location. href ="./form.html";}
+	</script>
+    </div>
+    <div class="ham" ><i class="bi bi-list" onclick="hamb()"></i></div>
+</div>
+  5
+  
+       <script>
+       
+      
+     
+
+      window.addEventListener('load',()=>
+{
+    var ant =JSON.parse(localStorage.getItem('ott'));    
+
+    var yt=document.getElementById("num")
+
+       if(localStorage.length==0){
+       yt=style.visibility="None"
+       }
+       else{
+       yt.innerHTML=localStorage.length
+
+       }
+
+
+let image=ant['pic']
+let title=ant['head']
+let size =ant['siz']
+let price=ant['pr']
+let quant=ant['qt']
+console.log(image)
+          let number = price.match(/(\d+)/);
+          let int=parseInt(quant)
+    let total=number[0]*int
+    let cartrow = document.createElement("div")
+    cartrow.classList.add("ti")
+    var cartitem = document.getElementsByClassName("cart")[0]
+    var cartrowitem = `
+   
+         <div class="class" style="max-width:100%;height:100px;overflow:hidden">
+          <img src= "${image}" style="width:150px;height:90px;">
+          <span class="ti1">${title}</span></div>
+        
+        <span class="ti2">${size} </span>
+        <span class="ti3">${quant}</span>
+        <span class="ti4">${price}</span>
+        <span class="ti5">Rs ${total}/-</span>
+
+        <div class="class1"><button class="btn-md btn-danger" type="button">X</button>
+            </div>`
+      
+
+
+cartrow.innerHTML = cartrowitem
+cartitem.append(cartrow)
+ cartrow.getElementsByClassName("btn-danger")[0].addEventListener('click',remove)
+ function remove(event){
+    localStorage.removeItem('ott')
+                    var c=event.target
+                    c.parentElement.parentElement.remove()
+                 }}
+ 
+)
+
+
+           </script>
+<div class="cart">
+            <div class="div" style="display:flex;max-width:75%;margin-top: 5px;
+            font-size: 1.5vw;margin-left: 100px;margin-right:60px;color: white;">
+             <label style=" width: 38%;" >ITEM</label>
+             <label style=" width: 13%;">SIZE</label>
+             <label style=" width: 22%;">QUANTITY</label>
+             <label style=" width: 22%;">PRICE</label>
+             <label style=" width: 0%;">TOTAL</label>
+            </div>      
+   
+        </div>
+            <script>
+                var a=document.getElementsByClassName("btn-danger")
+                for(var i=0;i<a.length;i++){
+                var b=a[i]
+                 b.addEventListener('click',remove)
+                 function remove(event){
+                    var c=event.target
+                    c.parentElement.parentElement.remove()
+                 }}
+             </script>
+        <style>
+          @media(max-width:700px){
+            .class{
+                width: 200px;
+            }
+          }
+         .ti1{
+            font-size: 1.3vw;
+            padding-top:30px;
+            line-height: 40px; 
+         }
+           .ti2,.ti3,.ti4,.ti5{
+                padding-top:30px;
+                line-height: 40px;  
+                font-size: 1.6vw;
+              
+            }
+            .class{
+                padding: 5px 5px 5px 5px;
+            }
+            .td{margin-top:1.6vw;
+                margin-left: 77px;
+                color: white;
+            }
+         
+            .cart{
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 150px;
+                box-sizing: border-box;
+                border: 1px solid rgb(161, 160, 160);
+                border-radius: 12px;
+                background-color: #b1b1b12a;
+                width: 85%;
+                overflow: hidden;
+
+            }
+            
+.ti1 { float: center; width:10%; }
+.ti2 { float: left; width: 8%; }
+.ti3 { float: left; width: 5%; }
+.ti4 { float: left; width: 10%; }
+
+.ti5{ float: left; width: 10%;  }
+
+            .ti{
+              
+                box-sizing: border-box;
+                border: 1px solid rgb(161, 160, 160);
+                display:inline-flex;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 100%;
+                height:auto;
+                background-color: #0c0c0c36;
+                color: white;
+                margin-top: 10px;
+                
+            }
+            .btn-danger{
+                margin-top:30px;
+                line-height: 40px;  
+                font-size: 20px;
+               
+            }
+            body{
+                background-image: linear-gradient(rgb(27, 73, 105),rgb(4, 23, 59));
+
+            }
+            </style>
+            	
+	<br><br><br>
+          
+
+<div class="footer">
+	<div class="footer2">	
+<div class="contain" id="footer">
+	<h3 style="color: white;margin-top: 16px;">STAY CONNECTED</h3>
+	<div id="form2">
+	<input type="email"id="email" placeholder="Enter your email" >
+<button id="submit">subscribe</button></div><br>
+<p style="color: rgb(232, 232, 232);">we don't send spams! </p>
+</div>
+
+<div class="content">
+<div id="os1">
+<p style="margin-left: 20px;font-size: 17px;">SHOPPING</p>
+	<ol><li>New arrivals</li><br><br>
+	<li>Mens</li><br><br>
+	<li>Womens</li><br><br>
+	<li>Brands</li><br><br>
+	<li>Offers</li></ol>
+	</div>
+
+<div id="os2">
+	<p style="margin-left: 20px;font-size: 17px;">ABOUT</p>
+	<ul>	<li>About us</li><br><br>
+		<li>Contact us</li><br><br>
+		<li>Store locator</li><br><br>
+		<li>Press</li><br><br>
+		<li>Blog</li></ul>
+		</div>
+
+
+		<div id="os3">
+			<p style="margin-left: 20px;font-size: 17px;">	POLICIES</p>
+			<ul>	<li>Return policy</li><br><br>
+				<li>Privacy policy</li><br><br>
+				<li>Terms & Condition</li><br><br>
+				<li>Shipping Information</li><br>
+			</ul>
+				</div>
+				<div id="os4">
+					<p style="margin-left: 20px;font-size: 17px;">HELP</p>
+					<ul>	<li>FAQ</li><br><br>
+						<li>Track your Order</li><br><br>
+						<li>Return Request</li><br><br>
+						
+					</ul>
+						</div></div></div><br><br><br>
+<hr>
+						<div id="span">
+							<p style="color:rgb(255, 255, 255);font-size: 20px;text-align: center; " >Folow us on</p><br>
+						<div class="icons" style="display:flex;margin:auto;gap:35px;justify-content: center;">
+							<i class="bi bi-facebook" id="social1" ></i>
+							<i class="bi bi-instagram"  id="social2"></i>
+							<i class="bi bi-twitter"  id="social3"></i>
+							<i class="bi bi-youtube" id="social4"></i>	
+						</div></div>
+<hr>
+<p style=" text-align:center;color:rgb(8, 255, 123);letter-spacing:10px;font-size:18px">DESIGN & DEVELOPED BY SIBIN.R</p>
+</div>
+</body>
+</html>
