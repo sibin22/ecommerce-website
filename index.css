@@ -206,9 +206,10 @@ form:hover .ai
 	
 #ul1
 {
-width: 45%;
-column-gap: 30px;
+max-width: 45%;
+gap: 3%;
 display: flex;
+margin-left: auto;
 
 
 }
