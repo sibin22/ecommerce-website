@@ -360,7 +360,7 @@ transform: scale(1.35);
 	display:flex;
 	width: 100%;
 }
-@media(max-width:750px){
+@media(max-width:800px){
 	.card-deck  {
         align-items: center;
         margin-top: 40px;
